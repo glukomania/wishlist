@@ -1,0 +1,6 @@
+[build]
+  command = "nuxi build"
+  publish = ".output/public"
+
+[[plugins]]
+  package = "@netlify/plugin-nuxt"
