@@ -38,12 +38,14 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { auth } from "~/composables/useFirebase";
+import { useFirebaseAuth } from "~/composables/useFirebaseAuth";
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
 } from "firebase/auth";
+
+const auth = useFirebaseAuth();
 
 const email = ref("");
 const password = ref("");

@@ -5,9 +5,11 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import { auth } from "~/composables/useFirebase";
+import { useFirebaseAuth } from "~/composables/useFirebaseAuth";
 import { signInAnonymously, signOut, onAuthStateChanged } from "firebase/auth";
 import type { User } from "firebase/auth";
+
+const auth = useFirebaseAuth();
 
 const user = ref<User | null>(null);
 
